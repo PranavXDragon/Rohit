@@ -114,6 +114,27 @@ export default function Contact() {
             </motion.div>
           )}
 
+          {loading && !submitted && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="mb-6 p-4 bg-blue-100 dark:bg-blue-900/30 border border-blue-400 dark:border-blue-700 text-blue-800 dark:text-blue-300 rounded-lg flex items-center gap-3"
+            >
+              <div className="w-5 h-5 flex-shrink-0">
+                <div className="animate-spin">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <p className="font-semibold">Sending your message...</p>
+                <p className="text-sm">Thanks for reaching out! Please wait while we process your message.</p>
+              </div>
+            </motion.div>
+          )}
+
           {error && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
