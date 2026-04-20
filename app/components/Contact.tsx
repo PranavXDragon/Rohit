@@ -30,12 +30,8 @@ export default function Contact() {
     setError("");
 
     try {
-      // Use /api for production (Vercel), http://localhost:5000 for local
-      const apiUrl = process.env.NODE_ENV === 'production' 
-        ? '/api/contact' 
-        : (process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000') + '/api/contact';
-      
-      const response = await fetch(apiUrl, {
+      // Use the Next.js API route
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
