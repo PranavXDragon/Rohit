@@ -5,31 +5,36 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "EcoTrack Dashboard",
-    description: "A real-time analytics dashboard for environmental monitoring, built with Next.js and WebSocket for live data visualization.",
+    title: "Jharkhand Tourism Platform",
+    description: "A platform for tourists to find the best travel planning in Jharkhand.",
     image: "/Images/project.jpg",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "WebSocket"],
-    demoUrl: "#",
+    tags: ["Web", "Tourism", "Travel Planning"],
+    demoUrl: "https://jharkhanddarshan.netlify.app/",
     githubUrl: "#",
     color: "from-emerald-500 to-teal-500"
   },
   {
-    title: "CryptoFlow",
-    description: "Cryptocurrency trading platform with advanced charting capabilities and real-time market data integration.",
+    title: "EmpowerNet",
+    description: "A web platform for local people to connect with NGO services and community programs.",
     image: "/Images/project.jpg",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
-    demoUrl: "#",
+    tags: ["Web", "NGO", "Community"],
+    demoUrl: "https://empowernett.netlify.app/",
     githubUrl: "#",
     color: "from-blue-500 to-indigo-500"
   },
   {
-    title: "AI Content Studio",
-    description: "Content generation platform powered by AI, helping creators produce high-quality content efficiently.",
+    title: "IoT Projects",
+    description: "A collection of IoT projects including smart home automation, plant monitoring, and bird deterrent systems.",
     image: "/Images/project.jpg",
-    tags: ["Next.js", "OpenAI", "PostgreSQL", "AWS"],
+    tags: ["IoT", "Arduino", "Sensors"],
     demoUrl: "#",
     githubUrl: "#",
-    color: "from-purple-500 to-pink-500"
+    color: "from-purple-500 to-pink-500",
+    iotProjects: [
+      "Bird Deterrent Automatic Sprinkler System",
+      "Smart Plant Monitoring System (soil moisture, temperature, humidity to cloud)",
+      "Voice Controlled Home Automation"
+    ]
   }
 ];
 
@@ -105,9 +110,21 @@ export default function Projects() {
                              transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
                 </p>
+
+                {/* IoT Projects List */}
+                {project.iotProjects && (
+                  <ul className="mb-6 space-y-2">
+                    {project.iotProjects.map((iotProject: string, idx: number) => (
+                      <li key={idx} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span className="text-purple-500 mt-1">•</span>
+                        <span>{iotProject}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Action Buttons with Updated Design */}
                 <div className="flex gap-4 flex-col md:flex-row">
@@ -120,7 +137,7 @@ export default function Projects() {
                              dark:hover:bg-purple-600 transition-colors shadow-lg 
                              shadow-purple-500/20"
                   >
-                    Live Demo
+                    {project.iotProjects ? "Learn More" : "Live Demo"}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

@@ -39,6 +39,7 @@ export default function Navbar() {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
 
   if (!mounted) return null;
@@ -236,7 +237,7 @@ export default function Navbar() {
                 <div className="p-6 border-t border-purple-500/10 dark:border-purple-500/5">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      © 2024 Arthur Morgan
+                      © 2024 Rohit Bramhe
                     </span>
                     <motion.button
                       whileHover={{ scale: 1.1 }}

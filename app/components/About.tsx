@@ -22,8 +22,8 @@ export default function About() {
               {/* Image Container */}
               <div className="relative rounded-lg overflow-hidden bg-white">
                 <Image
-                  src="/Images/me.png"
-                  alt="Arthur Morgan"
+                  src="/Images/profile.jpeg"
+                  alt="Rohit Bramhe"
                   width={600}
                   height={700}
                   className="object-cover transition duration-300 group-hover:scale-105"
@@ -46,19 +46,15 @@ export default function About() {
 
             <div className="space-y-6 text-gray-600 dark:text-gray-300">
               <p>
-                Hello! I&apos;m Arthur Morgan, a Full Stack Developer with 5 years of experience
-                in crafting digital solutions that make a difference.
+                Hello! I&apos;m Rohit Bramhe, a passionate Full Stack Developer and Data Science student focused on building impactful digital solutions.
               </p>
               
               <p>
-                Based in Saint Denis, I&apos;ve had the opportunity to work with diverse clients
-                ranging from startups to established enterprises. My expertise lies in
-                building scalable web applications that combine functionality with exceptional user experience.
+                I have worked on various academic and personal projects, gaining hands-on experience in developing scalable web applications that combine functionality with a smooth user experience.
               </p>
 
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing
-                to open-source projects, or sharing knowledge with the developer community.
+                When I&apos;m not coding, I explore new technologies, work on projects, and continuously improve my skills to grow as a developer.
               </p>
             </div>
 
@@ -88,10 +84,10 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12">
               {[
-                { number: '5+', label: 'Years', color: 'from-purple-600 to-indigo-600' },
-                { number: '50+', label: 'Projects', color: 'from-blue-600 to-cyan-600' },
-                { number: '30+', label: 'Clients', color: 'from-emerald-600 to-teal-600' },
-                { number: '99%', label: 'Success', color: 'from-orange-600 to-amber-600' }
+                { number: '10+', label: 'Projects', color: 'from-purple-600 to-indigo-600' },
+                { number: '15+', label: 'Skills', color: 'from-blue-600 to-cyan-600' },
+                { number: '8+', label: 'Courses', color: 'from-emerald-600 to-teal-600' },
+                { number: '95%', label: 'Grade', color: 'from-orange-600 to-amber-600' }
               ].map((stat) => (
                 <motion.div 
                   key={stat.label}
