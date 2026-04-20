@@ -28,8 +28,12 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
-      const response = await fetch(`${backendUrl}/api/contact`, {
+      // Use /api for production (Vercel), http://localhost:5000 for local
+      const apiUrl = process.env.NODE_ENV === 'production' 
+        ? '/api/contact' 
+        : (process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000') + '/api/contact';
+      
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
