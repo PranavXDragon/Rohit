@@ -80,8 +80,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-            Have a question or want to collaborate? I'd love to hear from you!
-            Send me a message and I'll respond as soon as possible.
+            Have a question or want to collaborate? I&apos;d love to hear from you!
+            Send me a message and I&apos;ll respond as soon as possible.
           </p>
         </motion.div>
 
@@ -100,7 +100,7 @@ export default function Contact() {
               exit={{ opacity: 0 }}
               className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-700 text-green-800 dark:text-green-300 rounded-lg"
             >
-              ✓ Thank you for your message! I'll get back to you soon.
+              ✓ Thank you for your message! I&apos;ll get back to you soon.
             </motion.div>
           )}
 
